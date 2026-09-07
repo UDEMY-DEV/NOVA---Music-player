@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+  <meta http-equiv="CONTENT-TYPE" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="NOVA-responsive-style.css"/>
+  <title>NOVA - music player</title>
+</head>
+<body>
+  <!--=======NAVIGATIONS========-->
+  <div class="navigation">
+    
+    <button class="nav-btn" data-page="home" >
+      <img src="images/house.svg">
+    </button>
+    
+    <button class="nav-btn" data-page="search">
+      <img src="images/search.svg">
+    </button>
+   
+    <button id="logo" class="nav-btn" data-page="nova" >
+      <img src="images/logo.png">
+    </button>
+    
+     <button class="nav-btn" data-page="download">
+       <img src="images/download.svg">
+    </button>
+      
+     <button class="nav-btn" data-page="account">
+       <img src="images/user.svg">
+    </button>
+      
+    </div>
+  <!--======= MAIN-CONTENT========-->
+  <main>
+  <!--=======HOME========-->
+    <section id="home" class="page active">
+        <div class="hero">
+    <img src="images/logo.png">
+    <p>NOVA</p>
+  </div>
+      <p class="text">Trending🔥</p>
+      <div id="trendingSongs" class="song-row" >
+        </div>
+        
+          <p class="text">90's Hits</p>
+          <div id="oldSongs" class="song-row" >
+        </div>
+      
+      <p class="text">Honey Singh</p>
+          <div id="honeySongs" class="song-row" >
+        </div>
+      
+      <p class="text">Hindu-Special</p>
+          <div id="hinduSongs" class="song-row" >
+        </div>
+      
+      <p class="endText">search for more...</p>
+     
+    </section>
+  
+  <!--=======SEARCH========-->
+    <section id="search" class="page">
+          <!---SEARCH-BAR--->
+  <div class="search-box">
+        🔍
+        <input
+            type="text"
+            id="searchInput"
+            placeholder="Search songs..."
+        >
+    </div>
+          <!---CATEGORIES--->
+
+     <h2 class="section-title">
+            Categories
+        </h2>
+
+        <div class="categories">
+
+            <button
+                class="category-btn"
+                data-category="pop">
+                POP
+            </button>
+
+            <button
+                class="category-btn"
+                data-category="romantic">
+                ROMANTIC
+            </button>
+
+            <button
+                class="category-btn"
+                data-category="sad">
+                SAD
+            </button>
+
+            <button
+                class="category-btn"
+                data-category="party">
+                PARTY
+            </button>
+
+            <button
+                class="category-btn"
+                data-category="religious">
+                RELIGIOUS
+            </button>
+
+            <button
+                class="category-btn"
+                data-category="english">
+                ENGLISH
+            </button>
+
+        </div>
+      <section class="songs-section">
+
+        <div class="title-row">
+
+            <h2 id="categoryTitle">
+                POP
+            </h2>
+
+            <span id="songCount">
+                0 songs
+            </span>
+
+        </div>
+
+
+        <div
+            id="songRow"
+            class="song-row">
+        </div>
+
+        <p class="endText">search for more...</p>
+
+      </section>
+      
+    </section>
+  <!--=======NOVA========-->
+    <section id="nova" class="page">
+      
+      <p class="unavailable"> currently unavabilable!!</p>
+    </section>
+  <!--=======DOWNLOAD========-->
+    <section id="download" class="page">
+      
+     <p class="unavailable"> currently unavabilable!!</p>
+    </section>
+  <!--=======ACCOUNT========-->
+    <section id="account" class="page">
+       <div class="profile-card">
+
+        <div class="avatar" id="avatar">
+            N
+        </div>
+
+        <div class="profile-info">
+            <h1 id="accountName">Guest</h1>
+            <p>Welcome to NOVA 🎧</p>
+        </div>
+
+        <button id="editNameBtn" class="edit-btn">
+            ✏️
+        </button>
+
+    </div>
+
+
+    <!-- STATS -->
+
+    <div class="stats">
+
+        <div class="stat-box">
+            <strong id="playedCount">0</strong>
+            <span>Played</span>
+        </div>
+
+        <div class="stat-box">
+            <strong id="likedCount">0</strong>
+            <span>Liked</span>
+        </div>
+
+    </div>
+
+
+    <!-- RECENTLY PLAYED -->
+
+    <div class="account-section">
+
+        <div class="account-heading">
+            <h2>Recently Played</h2>
+            <button id="clearRecent">
+                Clear
+            </button>
+        </div>
+
+        <div
+            id="recentSongs"
+            class="recent-songs">
+
+            <p class="empty-text">
+                No songs played yet 🎵
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <!-- LIKED SONGS -->
+
+    <div class="account-section">
+
+        <div class="account-heading">
+            <h2>Liked Songs ❤️</h2>
+        </div>
+
+        <div
+            id="likedSongs"
+            class="liked-songs">
+
+            <p class="empty-text">
+                No liked songs yet
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <!-- SETTINGS -->
+
+    <div class="account-section">
+
+        <h2>Settings</h2>
+
+
+       
+
+
+        <div
+            class="setting-item clickable"
+            id="changeName">
+
+            <div>
+                <strong>✏️ Change Name</strong>
+                <p>Change your NOVA profile name</p>
+            </div>
+
+            <span>›</span>
+
+        </div>
+
+
+        <div
+            class="setting-item clickable"
+            id="resetAccount">
+
+            <div>
+                <strong>🔄 Reset Account</strong>
+                <p>Remove your saved profile data</p>
+            </div>
+
+            <span>›</span>
+
+        </div>
+
+    </div>
+
+
+    <!-- ABOUT -->
+
+    <div class="about-nova">
+
+        <div class="nova-logo">
+            N
+        </div>
+
+        <h2>NOVA</h2>
+
+        <p>
+            Your music. Your vibe. Your NOVA.
+        </p>
+
+        <small>
+            NOVA Music Player • v1.0
+        </small>
+
+    </div>
+
+      
+      
+    </section>
+      <!-- =========================
+                 NAME POPUP
+         ========================== -->
+
+    <div id="nameBox" class="name-box">
+
+        <div class="name-form">
+
+            <h2>👋 Welcome!</h2>
+
+            <p>
+                What should we call you?
+            </p>
+
+            <input
+                id="nameInput"
+                type="text"
+                placeholder="Enter your name"
+            >
+
+            <button
+                id="continueBtn"
+                class="continue-btn">
+                Continue
+            </button>
+
+        </div>
+
+    </div>
+    
+    <!-- MUSIC PLAYER -->
+
+    <div class="player">
+
+        <div class="player-info">
+
+            <div
+                id="playerCover"
+                class="player-cover">
+                🎵
+            </div>
+
+            <div>
+
+                <h3 id="currentSong">
+                    No song playing
+                </h3>
+
+                <p id="currentArtist">
+                    Select a song
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <audio
+            id="audioPlayer"
+            controls>
+        </audio>
+
+    </div>
+
+  </main>
+   <!-- CATEGORY FILES -->
+
+    <script src="categories/pop.js"></script>
+    <script src="categories/romantic.js"></script>
+    <script src="categories/sad.js"></script>
+    <script src="categories/party.js"></script>
+    <script src="categories/religious.js"></script>
+    <script src="categories/english.js"></script>
+    <script src="categories/more.js"></script>
+    <script src="categories/old.js"></script>
+  
+  <script src="script.js"></script>
+</body>
+</html>
